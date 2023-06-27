@@ -31,9 +31,9 @@ export interface CarProps {
     year: number;
 }
 
-export interface SearchManuFacturerProps {
-    manufacturer: string;
-    setManuFacturer: (manufacturer: string) => void;
+export interface SearchManufacturerProps {
+    selected: string;
+    setSelected: (manufacturer: string) => void;
 }
 
 export interface FilterProps {
@@ -54,9 +54,16 @@ export interface OptionProps {
 export interface CustomFilterProps {
     title: string;
     options: OptionProps[];
+    setFilter: (filter: string) => void;
 }
 
 export interface ShowMoreProps {
     pageNumber: number;
     isNext: boolean;
+    setLimit: (limit: number) => void
+}
+
+export interface SearchBarProps {
+    setManufacturer: (manufacturer: string) => void
+    setModel: (model: string) => void
 }
